@@ -14,10 +14,10 @@ struct people {
 };
 void printpeople(people s1)
 {
-	cout << "ÐòºÅ" << s1.id << endl << "ÐÕÃû£º"
-		<< s1.name << endl << "ÐÔ±ð£º" << s1.sex << endl
-		<< "ÄêÁä£º" << s1.age << endl
-		<< "µç»°ºÅÂë" << s1.phone << endl << "µØÖ·" << s1.address << endl << endl;;
+	cout << "åºå·" << s1.id << endl << "å§“åï¼š"
+		<< s1.name << endl << "æ€§åˆ«ï¼š" << s1.sex << endl
+		<< "å¹´é¾„ï¼š" << s1.age << endl
+		<< "ç”µè¯å·ç " << s1.phone << endl << "åœ°å€" << s1.address << endl << endl;;
 }
 people temp;
 string name;
@@ -27,14 +27,14 @@ int main()
 	int n;
 start:
 	fflush(stdin);
-	cout << "1.Ìí¼ÓÁªÏµÈË" << endl;
-	cout << "2.É¾³ýÁªÏµÈË" << endl;
-	cout << "3.²éÑ¯ÁªÏµÈË" << endl;
-	cout << "4.ÐÞ¸ÄÁªÏµÈË" << endl;
-	cout << "5.ÏÔÊ¾ÁªÏµÈË" << endl;
-	cout << "6.Çå¿ÕÁªÏµÈË" << endl;
-	cout << "0.ÍË³öÍ¨Ñ¶Â¼" << endl;
-	cout << "ÇëÊäÈëÊý×Ö£º";
+	cout << "1.æ·»åŠ è”ç³»äºº" << endl;
+	cout << "2.åˆ é™¤è”ç³»äºº" << endl;
+	cout << "3.æŸ¥è¯¢è”ç³»äºº" << endl;
+	cout << "4.ä¿®æ”¹è”ç³»äºº" << endl;
+	cout << "5.æ˜¾ç¤ºè”ç³»äºº" << endl;
+	cout << "6.æ¸…ç©ºè”ç³»äºº" << endl;
+	cout << "0.é€€å‡ºé€šè®¯å½•" << endl;
+	cout << "è¯·è¾“å…¥æ•°å­—ï¼š";
 	cin >> n;
 	switch (n)
 	{
@@ -55,32 +55,32 @@ flag1:
 
 		if (arr[i].used == 0) {
 
-			cout << "ÇëÊäÈëÐÕÃû:";
+			cout << "è¯·è¾“å…¥å§“å:";
 			cin >> arr[i].name;
-			cout << "ÇëÊäÈëÐÔ±ð:";
+			cout << "è¯·è¾“å…¥æ€§åˆ«:";
 			cin >> arr[i].sex;
-			cout << "ÇëÊäÈëÄêÁä:";
+			cout << "è¯·è¾“å…¥å¹´é¾„:";
 			cin >> arr[i].age;
-			cout << "ÇëÊäÈëµç»°ºÅÂë:";
+			cout << "è¯·è¾“å…¥ç”µè¯å·ç :";
 			cin >> arr[i].phone;
-			cout << "ÇëÊäÈë×¡Ö·:";
+			cout << "è¯·è¾“å…¥ä½å€:";
 			cin >> arr[i].address;
 			arr[i].used = 1;
 			arr[i].id = i + 1;
-			cout << "Ìí¼Ó³É¹¦" << endl;
+			cout << "æ·»åŠ æˆåŠŸ" << endl;
 			system("pause");
 			goto start;
 			break;
 		}
 	}
-	cout << "Í¨Ñ¶Â¼ÒÑÂú";
+	cout << "é€šè®¯å½•å·²æ»¡";
 	goto start;
 
 
 flag2:
 
 		
-		cout << "ÇëÊäÈëÉ¾³ýÈËµÄÐÕÃû£º" << endl;
+		cout << "è¯·è¾“å…¥åˆ é™¤äººçš„å§“åï¼š" << endl;
 		cin >> name;
 		for (int i = 0; i < 1000; i++)
 		{
@@ -94,7 +94,7 @@ flag2:
 					arr[j + 1].used = 0;
 
 				}
-				cout << "ÒÑÉ¾³ý" << endl;
+				cout << "å·²åˆ é™¤" << endl;
 				system("pause");
 				goto start;
 				break;
@@ -103,7 +103,7 @@ flag2:
 		}
 
 
-	cout << "Î´ÕÒµ½" << endl;
+	cout << "æœªæ‰¾åˆ°" << endl;
 	system("pause");
 	goto start;
 	
@@ -111,13 +111,13 @@ flag2:
 flag3:
 
 	
-	cout << " ÇëÊäÈë²éÑ¯ÐÕÃû£º";
+	cout << " è¯·è¾“å…¥æŸ¥è¯¢å§“åï¼š";
 	cin >> name;
 	for (int i = 0; i < 1000; i++)
 	{
 		if (name == arr[i].name)
 		{
-			cout << "ÒÑÕÒµ½" << endl;
+			cout << "å·²æ‰¾åˆ°" << endl;
 			
 			printpeople(arr[i]);
 			system("pause");
@@ -125,37 +125,37 @@ flag3:
 		}
 		
 	}
-	cout << "Î´ÕÒµ½" << endl;
+	cout << "æœªæ‰¾åˆ°" << endl;
 	system("pause");
 	goto start;
 
 flag4:
-	cout << "ÇëÊäÈëÐÞ¸ÄÈËÐÕÃû:";
+	cout << "è¯·è¾“å…¥ä¿®æ”¹äººå§“å:";
 	cin >> name;
 	for (int i = 0; i < 1000; i++)
 	{
 
 		if (arr[i].name == name) {
 
-			cout << "ÇëÊäÈëÐÕÃû:";
+			cout << "è¯·è¾“å…¥å§“å:";
 			cin >> arr[i].name;
-			cout << "ÇëÊäÈëÐÔ±ð:";
+			cout << "è¯·è¾“å…¥æ€§åˆ«:";
 			cin >> arr[i].sex;
-			cout << "ÇëÊäÈëÄêÁä:";
+			cout << "è¯·è¾“å…¥å¹´é¾„:";
 			cin >> arr[i].age;
-			cout << "ÇëÊäÈëµç»°ºÅÂë:";
+			cout << "è¯·è¾“å…¥ç”µè¯å·ç :";
 			cin >> arr[i].phone;
-			cout << "ÇëÊäÈë×¡Ö·:";
+			cout << "è¯·è¾“å…¥ä½å€:";
 			cin >> arr[i].address;
 			arr[i].used = 1;
 			arr[i].id = i + 1;
-			cout << "ÐÞ¸Ä³É¹¦" << endl;
+			cout << "ä¿®æ”¹æˆåŠŸ" << endl;
 			system("pause");
 			goto start;
 			break;
 		}
 	}
-	cout << "Î´ÕÒµ½" << endl;
+	cout << "æœªæ‰¾åˆ°" << endl;
 	system("pause");
 	goto start;
 
@@ -168,7 +168,7 @@ flag5:
 		printpeople(arr[i]);
 		number++;
 	}
-	printf("¹²ÓÐ%dÎ»ÁªÏµÈË\n", number);
+	printf("å…±æœ‰%dä½è”ç³»äºº\n", number);
 	system("pause");
 	goto start;
 
@@ -178,7 +178,7 @@ flag6:
 		if (arr[i].used == 0) break;
 		arr[i].used = 0;
 	}
-	cout << "ÇåÀíÍê±Ï" << endl;
+	cout << "æ¸…ç†å®Œæ¯•" << endl;
 	system("pause");
 	goto start;
 
